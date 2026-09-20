@@ -1,28 +1,28 @@
 #include "rush01.h"
 
-int	parse(char *str, int *clues)
+int	ft_parse(char *texte, int *regles)
 {
 	int	i;
 
 	i = 0;
 	while (i < 16)
 	{
-		if (*str < '1' || *str > '4')
+		if (texte[0] < '1' || texte[0] > '4')
 			return (0);
-		clues[i] = *str - '0';
-		str++;
+		regles[i] = texte[0] - '0';
+		texte++;
 		i++;
 		if (i < 16)
 		{
-			if (*str != ' ')
+			if (texte[0] != ' ')
 				return (0);
-			str++;
+			texte++;
 		}
 	}
-	return (*str == '\0');
+	return (texte[0] == '\0');
 }
 
-void	error(void)
+void	ft_error(void)
 {
 	write(1, "Error\n", 6);
 }
