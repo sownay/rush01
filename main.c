@@ -2,19 +2,19 @@
 
 int	main(int argc, char **argv)
 {
-	int	grid[4][4];
-	int	clues[16];
+	int	tab[4][4];
+	int	regles[16];
 
-	if (argc != 2 || !parse(argv[1], clues))
+	if (argc != 2 || !ft_parse(argv[1], regles))
 	{
-		error();
+		ft_error();
 		return (1);
 	}
-	if (!solve(grid, clues))
+	if (!ft_solve(tab, regles, 0))
 	{
-		error();
+		ft_error();
 		return (1);
 	}
-	print_grid(grid);
+	ft_print(tab);
 	return (0);
 }
