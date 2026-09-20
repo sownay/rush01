@@ -1,24 +1,24 @@
 #include "rush01.h"
 
-void	print_grid(int grid[4][4])
+void	ft_print(int tab[4][4])
 {
-	int		i;
-	int		j;
-	char	c;
+	int		ligne;
+	int		colonne;
+	char	caractere;
 
-	i = 0;
-	while (i < 4)
+	ligne = 0;
+	while (ligne < 4)
 	{
-		j = 0;
-		while (j < 4)
+		colonne = 0;
+		while (colonne < 4)
 		{
-			c = grid[i][j] + '0';
-			write(1, &c, 1);
-			if (j < 3)
+			caractere = tab[ligne][colonne] + '0';
+			write(1, &caractere, 1);
+			if (colonne < 3)
 				write(1, " ", 1);
-			j++;
+			colonne++;
 		}
 		write(1, "\n", 1);
-		i++;
+		ligne++;
 	}
 }
