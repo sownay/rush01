@@ -23,3 +23,6 @@ void	tail_fd(int fd, int bytes)
 	write(1, buf, i);
 	free(buf);
 }
+
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
